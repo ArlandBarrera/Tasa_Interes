@@ -64,6 +64,7 @@ def mostrar_resultados(
 def main():
     cantidad_caracteres = 50
     periodo = ""
+    print("-" * cantidad_caracteres)
     print("\tCALCULADORA INTERES COMPUESTO V1.1")
     print("-" * cantidad_caracteres)
     principal = input("Monto Incial: ")
