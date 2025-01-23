@@ -2,10 +2,10 @@
 
 import time
 
-colors = {"r": "\033[31m", "n": "\033[0m"}
+colors: dict[str, str] = {"r": "\033[31m", "n": "\033[0m"}
 
 
-def cnv_str_float_try(string):
+def cnv_str_float_try(string: str):
     try:
         float(string)
         return True
@@ -13,7 +13,7 @@ def cnv_str_float_try(string):
         print(f"{colors['r']}Computo no valido. Solo valores numericos.{colors['n']}")
 
 
-def cnv_str_int_try(string):
+def cnv_str_int_try(string: str):
     try:
         int(string)
         return True
@@ -21,7 +21,7 @@ def cnv_str_int_try(string):
         print(f"{colors['r']}Computo no valido. Solo numeros enteros.{colors['n']}")
 
 
-def num_myr_cero(num, indicacion):
+def num_myr_cero(num: float, indicacion: str) -> bool:
     if num <= 0:
         print(
             f"{colors['r']}El valor `{indicacion}` no puede ser cero o negativo.{colors['n']}"
@@ -30,7 +30,7 @@ def num_myr_cero(num, indicacion):
     return True
 
 
-def cnv_str_int_cero(string, indicacion):
+def cnv_str_int_cero(string: str, indicacion: str) -> bool:
     if cnv_str_int_try(string):
         num = int(string)
         if num_myr_cero(num, indicacion):
@@ -38,7 +38,7 @@ def cnv_str_int_cero(string, indicacion):
     return False
 
 
-def cnv_str_float_cero(string, indicacion):
+def cnv_str_float_cero(string: str, indicacion: str) -> bool:
     if cnv_str_float_try(string):
         num = float(string)
         if num_myr_cero(num, indicacion):
@@ -47,13 +47,13 @@ def cnv_str_float_cero(string, indicacion):
 
 
 def mostrar_resultados(
-    acreedor,
-    deudor,
-    principal,
-    porcentaje_interes,
-    periodo,
-    cantidad_periodo,
-    cantidad_caracteres,
+    acreedor: str,
+    deudor: str,
+    principal: float,
+    porcentaje_interes: str,
+    periodo: str,
+    cantidad_periodo: int,
+    cantidad_caracteres: int,
 ):
     tasa_interes = float(porcentaje_interes) / 100
     print("-" * cantidad_caracteres)
@@ -88,7 +88,7 @@ def mostrar_resultados(
 
 def main():
     cantidad_caracteres = 50
-    periodos = {
+    periodos: dict[str, str] = {
         "1": ("Diario"),
         "2": ("Semanal"),
         "3": ("Mensual"),
