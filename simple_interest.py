@@ -6,7 +6,7 @@ CHAR_LENGTH = 50
 OPTION_PERIODS = {
     "1": "daily",
     "2": "weekly",
-    "3": "biweekly",
+    "3": "semimonthly",
     "4": "monthly",
     "5": "bimonthly",
     "6": "quarterly",
@@ -18,7 +18,7 @@ OPTION_PERIODS = {
 PERIODS = {
     "daily": YEAR_LENGTH,
     "weekly": 52,
-    "biweekly": 24,
+    "semimonthly": 24,
     "monthly": 12,
     "bimonthly": 6,
     "quarterly": 4,

@@ -1,27 +1,31 @@
 # 📊 Calculadora de Intereses
 
-Programa que cálcula el interés acumulado a partir de un monto incial.
+Programa para calcular el interés acumulado a partir de:
+- monto inicial
+- tasa de interés (%)
+- periodo (mensual, trimestral, anual, etc)
+- fecha de emisión
+- fecha de terminación
 
 ## ✨ Características
 
 * 💻 Fácil de entender y utilizar.
-* 🎨 Colores para indicar errores.
 
-## Tipos de Interés
+## Tipos de Intereses
 
 ### 📈 Interés Simple
 
-El más sencillo y el que menos rentabilidad aporta.
+El más sencillo y el que menos rentabilidad aporta. Crecimiento lineal.
 
 ```python
 # P = Monto incial
-# r = Tasa de interès
-# n = Nùmero de periodos acumulados
+# r = Tasa de interés
+# n = Número de periodos acumulados
 IS = P * r * n
 ```
 ### 💸 Interés Compuesto
 
-La octava maravilla del mundo.
+La octava maravilla del mundo. Crecimiento exponencial.
 
 ```python
 # P = Monto incial
